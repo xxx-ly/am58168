@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <g id="Group_4" data-name="Group 4" transform="translate(-168 -175)">
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(168 175)" fill="none" stroke="#006dd8" stroke-width="2">
+      <circle cx="18" cy="18" r="18" stroke="none"/>
+      <circle cx="18" cy="18" r="17" fill="none"/>
+    </g>
+    <path id="social-o-fb" d="M16.086,4.549H18.2V1.235h-3.16a4.285,4.285,0,0,0-3.254,1.6s-.862.814-.876,3.194h0V8.512H7.782v3.519H10.9v9.091h3.6V12.032h3.1l.432-3.519H14.507V6.026h0A1.446,1.446,0,0,1,16.086,4.549Z" transform="translate(173.218 181.765)" fill="#006dd8"/>
+  </g>
+</svg>

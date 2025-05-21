@@ -1,0 +1,49 @@
+/** path-skin */
+.path {
+    font-size:0;
+    position:relative;
+    color:$color01;
+    padding:15px;
+    a, span {
+        display:inline-block;
+        padding:5px 0;
+    }
+    a {
+        transition: .3s;
+        position:relative;
+        display: inline-block;
+        vertical-align: middle;
+        color:#666;
+        text-decoration:none;
+        &:focus {
+            color:$color01;
+            text-decoration: underline;
+        }
+    }
+    ul { max-width: 1200px; margin:0 auto; }
+    li {
+        @include font(13, 14);
+        position:relative;
+        display:inline-block;
+        vertical-align:middle;
+        line-height:1.5;
+        text-align: left;
+        &:before {
+            transform: scale(0.8,1.5);
+            content: '>';
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+            line-height: 10px;
+        }
+        &:first-child:before { content:none; }
+    }
+    img { vertical-align:baseline; }
+}
+@media screen and (min-width: 768px) {}
+@media screen and (min-width: 769px) {
+    .path {
+        a:hover { text-decoration:underline; }
+    }
+}
+@media screen and (min-width: 1200px) {}

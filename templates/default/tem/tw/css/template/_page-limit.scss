@@ -1,0 +1,72 @@
+/** 分頁樣式 */
+.page-limit {
+    font-size:0;
+    text-align:center;
+    color:#999;
+    padding:20px 0;
+    ul { margin:0 -1px; }
+    li, span {
+        @include font(14, 16);
+        display: inline-block;
+        vertical-align: middle;
+        padding:0 1px;
+        &.on a {
+            color:#000;
+            text-decoration:underline;
+        }
+    }
+    a {
+        min-width: 35px;
+        height: 35px;
+        line-height: 35px;
+        padding: 0 8px;
+        text-decoration:none;
+        &:focus {
+            color: $color03;
+            background:#ddd;
+        }
+    }
+    .btn-prev, .btn-next {
+        position:relative;
+        font-size:0;
+        display:inline-block;
+        vertical-align:middle;
+        &:after  {
+            content:''; display:block;
+            position:absolute;
+            left:50%; top:50%;
+            margin:-8px 0 0 -4px;
+            width: 0; height: 0;
+            border-style: solid;
+        }
+        &:focus { background:none; }
+    }
+    .btn-prev {
+        &:after {
+            border-width: 8px 8px 8px 0;
+            border-color: transparent #999 transparent transparent;
+        }
+        &:focus:after { border-color: transparent $color03 transparent transparent; }
+    }
+    .btn-next {
+        &:after {
+            border-width: 8px 0 8px 8px;
+            border-color: transparent transparent transparent #999;
+        }
+        &:focus:after { border-color: transparent transparent transparent $color03; }
+    }
+}
+@media screen and (min-width: 769px) {
+    .page-limit {
+        a:hover {
+            color: $color03;
+            background:#ddd;
+        }
+        .btn-prev {
+            &:hover:after { border-color: transparent $color03 transparent transparent; }
+        }
+        .btn-next {
+            &:hover:after { border-color: transparent transparent transparent $color03; }
+        }
+    }
+}

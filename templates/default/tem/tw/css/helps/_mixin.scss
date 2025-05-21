@@ -1,0 +1,56 @@
+// Backports from Bootstrap 4
+@mixin btn-default($text-color:#444, $bg-color:#f5f5f2, $border-color:#e0e0e0) {
+    color: $text-color;
+    background-color: $bg-color;
+    border-color: $border-color;
+}
+@mixin btn-active($text-color:#fff, $bg-color:$skin-color01, $border-color:$skin-color01) {
+    &:focus, &.focus, &:active, &.on {
+        color: $text-color;
+        background-color: $bg-color;
+        border-color: $border-color;
+    }
+    @media screen and (min-width: 769px){
+        &:hover {
+            color: $text-color;
+            background-color: $bg-color;
+            border-color: $border-color;
+        }
+    }
+}
+@mixin font-size($num: 14) {
+    $base:0.625;
+    font-size: $num + px;
+    font-size: ($num * $base / 10) + rem;
+}
+@mixin font($font-size01, $font-size02:$font-size01, $font-size03:$font-size02) {
+    @include font-size($font-size01);
+    @if ($font-size01 != $font-size02) {
+        @media screen and (min-width: 768px){
+            @include font-size($font-size02);
+        }
+    }
+    @if ($font-size02 != $font-size03) {
+        @media screen and (min-width: 1200px){
+            @include font-size($font-size03);
+        }
+    }
+}
+@mixin abs_full{
+    position: absolute;
+    left:0; top:0;
+    width:100%; height: 100%;
+    @content;
+}
+@mixin filter-cw {
+    filter: saturate(0) brightness(10);
+}
+@mixin filter-c0 {
+    filter: saturate(0) brightness(0);
+}
+@mixin hover {
+    &:focus { @content; }
+    @media screen and (min-width: 769px){
+        &:hover { @content; }
+    }
+}

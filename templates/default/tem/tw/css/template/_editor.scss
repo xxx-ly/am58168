@@ -1,0 +1,105 @@
+.editor {
+    @include font(16);
+    line-height: 1.6;
+    overflow:hidden;
+    img { height:auto !important; }
+    .nav-toc-list {
+        line-height: 1.8;
+        ul { padding: 0 0 0 10px; }
+        li {
+            background: none;
+            padding:0;
+        }
+        .nav-list {
+            > li {
+                //list-style: outside disc none;
+                > ul {
+                    padding: 5px 0 10px 30px;
+                    > li { list-style: outside circle none; }
+                }
+            }
+        }
+    }
+}
+.editor, .editor03{
+    .fw5{font-weight: 500;}
+    .fw7{font-weight: 700;}
+}
+.editor01, .editor02 {
+    line-height:2;
+    h1, h2, h3, h4, h5, h6 { line-height: 1.5; }
+    h2 {
+        @include font(24, 26);
+        margin:0 auto 10px;
+    }
+    h3 {@include font(20, 22);}
+    h4 { @include font(18, 20); }
+    h5, h6 { @include font(16, 18); }
+    a {
+        color:#008080;
+        &:focus { color:$color01; }
+    }
+    p a { padding:0 5px; }
+}
+.editor01 { //faq
+    h2 { color:$color04; }
+    h3 { color:#0878B3; }
+    h4 { color:$color03; }
+    h5 { color:#5BA1BC; }
+}
+.editor02 {
+    h2 { color:#7CA113; }
+    h3 { color:#0085B2; }
+    h4 { color:#DB8E1B; }
+    h5 { color:#008C23; }
+    p { margin:0 auto 5px; }
+    ul, li { margin:0; padding:0; list-style:none outside none; }
+    li {
+        padding:0 0 0 30px;
+        background-image:url(../images/icon-arr05.png);
+        background-position: left 5px ;
+        background-repeat: no-repeat;
+    }
+}
+.editor03{
+    font-family: $font-ms;
+    h1, h2{margin: 0 0 20px;}
+    a{text-decoration: none;}
+    p{line-height: 1.5;}
+    .text{text-decoration: none;}
+    .btn{min-width: 150px;}
+}
+.editor04{
+    p{color: #666;}
+    .tl{text-align: left;}
+}
+.fs0 { font-size: 0; }
+.fs12{@include font(12);}
+.fs14{@include font(14);}
+.fs15{@include font(15);}
+.fs1416{@include font(14,16);}
+.fs16{@include font(16);}
+.fs17{@include font(17);}
+.fs18{@include font(18);}
+.fs20{@include font(20);}
+.fs1618{@include font(16,18);}
+.fs1620{@include font(16,20);}
+.fs2022{@include font(20,22);}
+.fs2224{@include font(22,24);}
+.fs2225{@include font(22,25);}
+.fs2029{@include font(20,29);}
+.fs2529{@include font(25,29);}
+.fs2736{@include font(27,36);}
+.fs3039{@include font(30,39);}
+.fs3645{@include font(36,45);}
+.fs3047{@include font(30,47);}
+.fs69{@include font(48,69);}
+.fs6688{@include font(66,88);}
+@media screen and (min-width: 769px) {
+    .editor01, .editor02 {
+        a:hover { color: $color01; }
+    }
+    .editor04, .part18, .part19{
+        @include font(17);
+    }
+}

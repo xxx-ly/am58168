@@ -1,0 +1,68 @@
+%bg, %bg-cover, %bg-contain {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+%bg-cover {
+    background-size: cover;
+}
+%bg-contain {
+    background-size: contain;
+}
+%mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+%abs-full {
+    position: absolute;
+    left:0; top:0;
+    width: 100%; height: 100%;
+}
+%figure-skin01 {
+    position: relative;
+    height: 0;
+    padding: 0 0 100%;
+    overflow: hidden;
+    img {
+        transform: translate(-50%,-50%);
+        position: absolute;
+        left:50%; top:50%;
+    }
+}
+%form-ctrl {
+    display: block;
+    width:100%;
+    min-width: 180px;
+    padding:8px 10px 6px;
+    background: #ffffff;
+    border: 1px solid #d2d2d2;
+    height: 40px;
+    line-height: 1.5;
+}
+%black { color: black; }
+%white { color: white; }
+%orange { color: $orange; }
+%color1 { color: $color01; }
+%color1-lite1 { color: $color03; }
+%color1-lite2 { color: $color02; }
+%color2 { color: $color04; }
+%color2-lite1 { color: $color07; }
+%color2-lite2 { color: $color06; }
+%color3 { color: $color05; }
+%color3-lite1 { color: $color08; }
+
+%bg-dark { background-color: black; }
+%bg-white { background-color: white; }
+%bgc1 { background-color: $color01; }
+%bgc1-lite1 { background-color: $color03; }
+%bgc1-lite2 { background-color: $color02; }
+%bgc2 { background-color: $color04; }
+%bgc2-lite1 { background-color: $color07; }
+%bgc2-lite2 { background-color: $color06; }
+%bgc3 { background-color: $color05; }
+%bgc3-lite1 { background-color: $color08; }
+/** 舊 extend */
+%list {
+    margin:0; padding:0; list-style:none outside none;
+    > li { margin:0; padding:0; }
+}
+@media screen and (min-width: 768px) {}

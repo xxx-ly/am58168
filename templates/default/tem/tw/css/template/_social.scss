@@ -1,0 +1,82 @@
+/** social-skin */
+.social-wrap {
+    font-size:0;
+    ul, li { margin:0; padding:0; list-style:none outside none; }
+    a {
+        transition: .3s;
+        position:relative;
+        display:block;
+    }
+}
+.social-skin01, .service-link {
+    text-align: center;
+    font-size: 0;
+    ul { margin:0 -10px; }
+    li {
+        display:inline-block;
+        vertical-align:middle;
+        padding:0 10px;
+        a { display: block; }
+    }
+    a {
+        font-size: 0;
+        text-indent: -999px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width:32px; height:32px;
+        overflow:hidden;
+        &:before {
+            @extend %bg-contain;
+            content:''; display:block;
+            position:absolute;
+            left:0; top:0;
+            width:100%; height:100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        & + a { margin-left:20px; }
+    }
+}
+.social-skin02 {
+    ul { margin:0 -2px; }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        padding:2px;
+    }
+    .icon { width: 32px; height: 32px; }
+}
+/**share-old*/
+.social-share, .social-share2 {
+    font-size:0;
+    margin:0; padding:0;
+    a {
+        text-indent:-999px;
+        display:inline-block;
+        vertical-align:top;
+        width:32px; height:32px;
+        margin:0 0 0 5px;
+        background:center no-repeat;
+        background-size:contain;
+        overflow:hidden;
+        &:first-child { margin:0; }
+    }
+    .btn_facebook { background-image:url(../images/btn_facebook.png); }
+    .btn_twitter { background-image:url(../images/btn_twitter.png); }
+    .btn_google { background-image:url(../images/btn_google.png); }
+    .btn_weibo { background-image:url(../images/btn_weibo.png); }
+    .btn_linkedin { background-image:url(../images/btn_linkedin.png); }
+}
+.social-share2 { padding:20px 0 0; }
+@media screen and (min-width: 640px) {
+    .social-share2 {
+        float:right;
+        padding:0;
+    }
+}
+@media screen and (min-width: 769px) {
+    .social-skin01 {
+        a:hover { border-radius:5px; }
+    }
+}

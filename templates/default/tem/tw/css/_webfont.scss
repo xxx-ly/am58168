@@ -1,0 +1,50 @@
+/** 字型 */
+@font-face {
+    font-family: 'myriad';
+    src: url('font/myriad/myriadRegular.eot');
+    src: url('font/myriad/myriadRegular.eot?#iefix') format('embedded-opentype'),
+         url('font/myriad/myriadRegular.woff2') format('woff2'),
+         url('font/myriad/myriadRegular.woff') format('woff'),
+         url('font/myriad/myriadRegular.ttf') format('truetype'),
+         url('font/myriad/myriadRegular.svg#myriad') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'myriad';
+    src: url('font/myriad/myriadLight.eot');
+    src: url('font/myriad/myriadLight.eot?#iefix') format('embedded-opentype'),
+         url('font/myriad/myriadLight.woff') format('woff'),
+         url('font/myriad/myriadLight.ttf') format('truetype'),
+         url('font/myriad/myriadLight.svg#myriad') format('svg');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'myriad';
+    src: url('font/myriad/myriadBold.eot');
+    src: url('font/myriad/myriadBold.eot?#iefix') format('embedded-opentype'),
+         url('font/myriad/myriadBold.woff2') format('woff2'),
+         url('font/myriad/myriadBold.woff') format('woff'),
+         url('font/myriad/myriadBold.ttf') format('truetype'),
+         url('font/myriad/myriadBold.svg#myriad') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* 修正粗體 */
+@font-face {
+    font-family: '微軟正黑體修正';
+    unicode-range: U+7db0, U+78A7, U+7B75; /* ASCII (碧筵綰) */
+    font-style: normal;
+    font-weight: bold;
+    src: local(Yu Gothic), local(MS Gothic);
+}
+/* 一般粗細的時候改回微軟正黑 */
+@font-face {
+    font-family: '微軟正黑體修正';
+    unicode-range: U+7db0, U+78A7, U+7B75; /* ASCII (碧筵綰) */
+    font-style: normal;
+    font-weight: normal;
+    src: local(微軟正黑體);
+}

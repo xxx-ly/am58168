@@ -1,0 +1,143 @@
+// font
+.font-ma { font-family: $ma; }
+.fs16, .t01 { @include font-size(16); }
+.fs18, .t05 { @include font(17, 18); }
+.fs20, .t02, .t04 { @include font(18, 20); }
+.fs25, .t06 { @include font(20, 25); }
+.fs26, .sec-t05 { @include font(22, 26); }
+.fs30, .sec-t06 { @include font(22, 26, 30); }
+.fs32, .t03 { @include font(24, 32); }
+.fs36, .sec-t02 { @include font(32, 36); }
+.fs40, .sec-t04 { @include font(32, 36, 40); }
+.fs46, .info-title, .sec-t03 { @include font(32, 46); }
+.fs64, .banner-t01, .sec-t01 { @include font(32, 46, 64); }
+.fw1, .sec-t04 { font-weight: 100; }
+.fw5, .normal, .title, .info-title, .t06 { font-weight: normal; }
+.fw7, .bold, .t01, .t04, .t05, .sec-t05 { font-weight: 700; }
+.lh1-2, .title, .info-title, .t03 { line-height: 1.2; }
+.lh1-5, .sec-t05 { line-height: 1.5; }
+.lh1-6 { line-height: 1.6; }
+.lh1-7 { line-height: 1.7; }
+.lh1-8, .t06 { line-height: 1.8; }
+.tl, .text-left { text-align: left; }
+.tc, .text-center { text-align: center; }
+.tr, .text-right { text-align: right; }
+// title old
+.info-title {
+    font-family: 'Kozuka Gothic Pro', $font-base;
+    text-transform:capitalize;
+    margin:0; padding:0;
+    padding:0 0 20px;
+	color:#84A520;
+    text-align:center;
+    span {
+        @include font(16, 24, 30);
+        display:block; color:#000;
+		font-weight:normal; margin:10px 0 0;
+    }
+}
+.title {
+    // text-transform:capitalize;
+    margin:0; padding:0;
+    small { display: block; }
+}
+.banner-t01 {   //banner
+    small {
+        @include font(18, 24);
+        margin:10px auto 0;
+    }
+}
+.sec-t01, .sec-t03 {
+    margin:0 auto 30px;
+    span, small { display: block; }
+    span {
+        font-family: 'Kozuka Gothic Pro', $font-base;
+        font-weight: 100;
+        margin:0 auto 10px;
+    }
+}
+.sec-t01 {  // index:model01, model02
+    text-align: center;
+    small { @include font(18, 24, 30); }
+}
+.sec-t02 {  // index:model03
+    margin:0 auto 10px;
+    span {font-weight: 100;}
+}
+.sec-t03 {  //service:model04
+    text-align: center;
+    small {
+        font-family: 'Kozuka Gothic Pro', $font-base;
+        @include font(18, 24);
+        margin:10px auto 0;
+    }
+}
+.sec-t04 {  //service:main-title
+    font-family: 'Kozuka Gothic Pro', $font-base;
+    text-align:center;
+    margin:0 auto 30px;
+    span {
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 auto;
+        &:before, &:after {
+            content: ''; flex:1;
+            margin:0 10px;
+            height: 1px;
+            max-width:100px;
+            background: $color03;
+        }
+    }
+    small {
+        @include font(12, 14, 15);
+        display: block;
+        margin:5px auto 0;
+        color: #aaa;
+    }
+}
+.sec-t05 {
+    margin:0 auto 20px;
+    small {
+        @include font(14, 16);
+        display: block;
+        margin:5px auto 0;
+    }
+}
+.t01 {      // model01:index, service, work, blog
+    margin:0 auto 5px;
+}
+.t04 {      // model04:work-detail
+    margin:0 auto 5px;
+}
+.t05 {      // layout-item02:faq-detail
+    margin:0 auto 10px;
+}
+.t-icon:before {
+    @extend %bg-contain;
+    content: ''; display: inline-block;
+    vertical-align: middle;
+    margin: -4px 15px 0 0;
+}
+@media screen and (min-width: 768px) {
+    .sec-t01 { margin:0 auto 40px; }
+    .sec-t04 { margin:0 auto 50px; }
+    .t06 {
+        span { padding:0 15px; }
+        &:before { top:20px; }
+    }
+}
+@media screen and (min-width: 769px) {
+    .sec-t02 { margin:0 auto 5px; }
+    .t05 {
+        small { margin:5px auto 0; }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .sec-t01 { margin:0 auto 50px; }
+    .t06 {
+        span { padding:0 20px; }
+        &:before { top:22px; }
+    }
+}

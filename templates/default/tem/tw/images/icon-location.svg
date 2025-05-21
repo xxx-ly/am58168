@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+  <g id="Group_3" data-name="Group 3" transform="translate(-217 -175)">
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(217 175)" fill="none" stroke="#fd0001" stroke-width="2">
+      <circle cx="18" cy="18" r="18" stroke="none"/>
+      <circle cx="18" cy="18" r="17" fill="none"/>
+    </g>
+    <path id="icon-map2" d="M11.182,0A8.763,8.763,0,0,0,2.429,8.753c0,5.464,7.776,11.651,8.107,11.912a1.049,1.049,0,0,0,1.293,0c.331-.261,8.107-6.447,8.107-11.912A8.766,8.766,0,0,0,11.182,0Zm0,12.487a3.734,3.734,0,1,1,3.733-3.734A3.733,3.733,0,0,1,11.182,12.487Z" transform="translate(223.571 183)" fill="#fd0001"/>
+  </g>
+</svg>

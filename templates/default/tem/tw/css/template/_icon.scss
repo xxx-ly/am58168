@@ -1,0 +1,102 @@
+/** icon */
+.icon {
+    @extend %bg-contain;
+    position: relative;
+    display: inline-block;
+}
+
+//no-text-icon
+.icon-step, .icon-logo, .icon-yes, .icon-no, .icon-facebook02, .icon-twitter02, .icon-google02, .icon-weibo02, .icon-linkedin02{
+    font-size: 0;
+    text-align: left;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.icon-about1, .icon-about2, .icon-author {
+    &:before {
+        @extend %bg-contain;
+        content: ''; display: block;
+        width:30px; height: 30px;
+        margin:0 auto 10px;
+    }
+}
+.icon-about1:before { background-image: url('../images/icon-about01.svg'); }
+.icon-about2:before { background-image: url('../images/icon-about02.svg'); }
+.icon-author:before { background-image: url('../images/icon-author.svg'); }
+.icon-step {
+    width:30px; height: 42px;
+    vertical-align: middle;
+    margin:0 10px 0 0;
+    &:before {
+        @extend %abs-full;
+        @extend %bg-contain;
+        content: ''; display: block;
+    }
+}
+.icon-step01:before { background-image: url('../images/service1-step01.png'); }
+.icon-step02:before { background-image: url('../images/service1-step02.png'); }
+.icon-step03:before { background-image: url('../images/service1-step03.png'); }
+.icon-step04:before { background-image: url('../images/service1-step04.png'); }
+.icon-logo, .icon-yes, .icon-no {
+    position: relative;
+    &:before {
+        @extend %abs-full;
+        @extend %bg-contain;
+        content: ''; display: block;
+    }
+}
+.icon-logo {
+    width:30px; height: 30px;
+    &:before { background-image: url('../images/icon-logo.svg'); }
+}
+.icon-yes, .icon-no { width:20px; height: 20px; }
+.icon-yes:before { background-image: url('../images/icon-yes.png'); }
+.icon-no:before { background-image: url('../images/icon-no.png'); }
+
+.icon-facebook:before { background-image:url('../images/icon-facebook.svg'); }
+.icon-mail:before { background-image:url('../images/icon-mail.svg'); }
+.icon-location:before { background-image:url('../images/icon-location.svg'); }
+.icon-skype:before { background-image:url('../images/icon-skype.svg'); }
+.icon-line:before { background-image:url('../images/icon-line.svg'); }
+
+.icon-facebook02, .icon-twitter02, .icon-google02, .icon-weibo02, .icon-linkedin02 {
+    position: relative;
+    &:before {
+        @extend %abs-full;
+        @extend %bg-contain;
+        content: ''; display: block;
+    }
+}
+.icon-facebook02:before {  background-image:url('../images/btn_facebook.png'); }
+.icon-twitter02:before {  background-image:url('../images/btn_twitter.png'); }
+.icon-google02:before {  background-image:url('../images/btn_google.png'); }
+.icon-weibo02:before {  background-image:url('../images/btn_weibo.png'); }
+.icon-linkedin02:before {  background-image:url('../images/btn_linkedin.png'); }
+.icon-prev01, .icon-next01, .icon-prev02, .icon-next02 {
+    &:before, &:after {
+        @extend %abs-full;
+        @extend %bg-contain;
+        content: ''; display: block;
+    }
+    &:after { opacity: 0; }
+}
+.icon-prev01 {
+    &:before { background-image: url('../images/arr-prev01-green.svg'); }
+    &:after { background-image: url('../images/arr-prev01.svg'); }
+}
+.icon-next01 {
+    &:before { background-image: url('../images/arr-next01-green.svg'); }
+    &:after { background-image: url('../images/arr-next01.svg'); }
+}
+.icon-prev02 {
+    &:before { background-image: url('../images/icon-arr03.png'); }
+}
+.icon-next02 {
+    &:before { background-image: url('../images/icon-arr04.png'); }
+}
+@media screen and (min-width: 768px) {
+    .icon-about1, .icon-about2, .icon-author {
+        &:before { width:40px; height: 40px; }
+    }
+}

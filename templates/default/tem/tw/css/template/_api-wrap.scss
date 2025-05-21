@@ -1,0 +1,97 @@
+/** table-wrap-skin */
+.api-wrap {
+    position:relative; height:0;
+    padding:0 0 56.45%;
+    iframe, object, embed, video {
+        position:absolute;
+        width:100%; height:100%;
+        left:0; top:0;
+    }
+}
+.google-map {
+    position:relative; height:0;
+    padding:0 0 75%;
+    iframe, object, embed, video {
+        position:absolute;
+        width:100%; height:100%;
+        left:0; top:0;
+    }
+}
+.api-skin01 { padding: 0 0 52.1875%; }
+.api-skin03 { padding: 0 0 62.5%; }
+.api-skin04 { padding: 0 0 56.15835%; }
+.tab-container {
+    .tab-head {
+        position:relative;
+        margin:0 -4px;
+        .tab-btn { margin: 0 4px; }
+    }
+    .tab-detail {
+        position: relative;
+        overflow:hidden;
+    }
+    .tab-nav {
+        display: flex;
+        align-items: center;
+    }
+    .tab-item {
+        margin:0 auto 10px;
+        z-index: -1;
+        .tab-inner {
+            transition: opacity .3s;
+            opacity: 0;
+            width:100%;
+            max-height: 0;
+            overflow: hidden;
+        }
+        &.on {
+            z-index: 1;
+            .tab-inner {
+                opacity: 1;
+                max-height: none;
+                padding:20px 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .tab-container {
+        .tab-item {
+            margin:0;
+            &.on {
+                .tab-inner { padding:50px 0 30px; }
+            }
+        }
+    }
+}
+@media screen and (min-width: 769px) {
+    .api-skin02 { padding:0; height: 530px; }
+    .video-player {
+        .prompt-sec {
+            @include font-size(16);
+            padding:10px 15px;
+        }
+        .syllabus-wrap {
+            position:absolute;
+            right:0; top:0;
+            width:240px; height:100%;
+            .swiper-sec {
+                opacity: 1;
+                position:relative;
+                left:0; top:0;
+                padding:30px 5px;
+                height:100%;
+            }
+            .btn { display:none; }
+        }
+    }
+    .tab-container {
+        .tab-head {
+            margin:0 -8px;
+            .tab-btn { margin:0 8px; }
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .google-map { position: static; }
+}
