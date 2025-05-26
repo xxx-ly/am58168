@@ -10283,8 +10283,6 @@ nav a:focus {
 .group01 .icon:before {
     content: '';
     display: block;
-    -webkit-filter: saturate(0) brightness(10);
-    filter: saturate(0) brightness(10)
 }
 
 .group01 .title {
